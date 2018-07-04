@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pokerOdds" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many hands are playing this round?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvA-3h-VEv">
+                                <rect key="frame" x="0.0" y="133" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYf-2t-peL">
+                                <rect key="frame" x="248" y="451" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A7B-Z4-RS7"/>
+                                    <constraint firstAttribute="width" constant="105" id="tXs-Fa-Gov"/>
+                                </constraints>
+                                <state key="normal" title="Deal Pre-Flop"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syf-ic-Aa5"/>
+                                    <segue destination="lI3-zH-YXj" kind="show" id="AOk-vL-DcE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Small Blind Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXq-Bn-q44">
+                                <rect key="frame" x="0.0" y="253" width="162" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="uPk-Af-8Cb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who's dealing? Enter the hand position" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AmZ-1X-axz">
+                                <rect key="frame" x="0.0" y="192" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="AmZ-1X-axz" secondAttribute="trailing" constant="-20" id="18n-jy-0Gt"/>
+                            <constraint firstItem="AmZ-1X-axz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="61g-r3-dkh"/>
+                            <constraint firstItem="nvA-3h-VEv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7vn-HL-j9c"/>
+                            <constraint firstItem="jYf-2t-peL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pu5-Gn-ZUf"/>
+                            <constraint firstItem="HXq-Bn-q44" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QzE-ti-rud"/>
+                            <constraint firstItem="nvA-3h-VEv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="113" id="Y1H-ol-dJd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jYf-2t-peL" secondAttribute="bottom" constant="119" id="YeN-do-fcm"/>
+                            <constraint firstAttribute="trailing" secondItem="nvA-3h-VEv" secondAttribute="trailing" id="kcc-z8-Y9B"/>
+                            <constraint firstItem="AmZ-1X-axz" firstAttribute="top" secondItem="nvA-3h-VEv" secondAttribute="bottom" constant="29" id="mNy-lm-mcT"/>
+                            <constraint firstItem="HXq-Bn-q44" firstAttribute="top" secondItem="AmZ-1X-axz" secondAttribute="bottom" constant="31" id="nru-2v-b0g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberOfHandsInput" destination="nvA-3h-VEv" id="BTd-Jq-Rv3"/>
+                        <outlet property="smallBlindAmountInput" destination="HXq-Bn-q44" id="QpC-8b-hIT"/>
+                        <outlet property="whoIsDealingInput" destination="AmZ-1X-axz" id="LC1-5S-qfa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="476"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Acw-1i-afY">
+            <objects>
+                <viewController id="lI3-zH-YXj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X21-Mc-I4i"/>
+                        <viewControllerLayoutGuide type="bottom" id="YPb-sw-VH3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7RA-fM-IP5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Us-U4-h1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="476"/>
+        </scene>
+    </scenes>
+</document>
